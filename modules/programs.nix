@@ -39,6 +39,9 @@
 			enable = true;
 			systemd.target = "graphical-session.target";
 		};
+		mtr = {
+			enable = true;
+		};
 	};
 
 	environment.systemPackages = with pkgs; [
@@ -49,5 +52,6 @@
 		fuzzel
 		btop
 		git
+		tree
 	];
 }
