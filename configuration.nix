@@ -6,25 +6,13 @@
   imports =
     [
       ./hardware-configuration.nix
+      ./modules/programs.nix
     ];
-  # programs #
-    programs = {
-      niri = {
-        enable = true;
-	package = inputs.niripkg.packages.${pkgs.system}.default;
-      };
-      neovim = {
-        enable = true;
-      };
-    };
-  
+
   # allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
-  # systemd-boot
-  # boot.loader.systemd-boot.enable = true;
   
-  # grub
+  # loader
   boot.loader.grub = {
     enable = true;
     device = "nodev"; 
@@ -71,10 +59,6 @@
   services.xserver.xkb.layout = "us,ru";
   services.xserver.xkb.options = "grp:caps_toggle";
 
-  # trash
-  services.xserver.enable = false;
-  services.printing.enable = false;
-
   # sounds
   services.pipewire = {
     enable = true;
@@ -92,24 +76,6 @@
       tree
     ];
   };
-
-  # global packages
-  # https://search.nixos.org/
-  environment.systemPackages = with pkgs; [
-    foot
-    fish
-    brave
-    wev
-    fastfetch
-    yazi
-    telegram-desktop
-    fuzzel
-    waybar
-    swaylock-effects
-    btop
-    nemo
-    git
-  ];
 
   # SUID wrappers
   programs.mtr.enable = true;
