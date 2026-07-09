@@ -3,7 +3,7 @@
 {
   imports =
     [
-    	.imports.nix
+    	imports.nix
     ];
 
   # allow unfree packages
