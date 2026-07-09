@@ -14,4 +14,4 @@
 		KernelPackages = pkgs.linuxPackages_latest;
 		KernelParams = [ "pcie.aspm=off" ];
 	};
-};
+}
