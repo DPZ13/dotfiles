@@ -3,3 +3,4 @@ result-*
 *.swp
 .direnv
 secrets.nix
+hardware-configuration.nix

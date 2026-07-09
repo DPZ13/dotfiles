@@ -50,8 +50,8 @@
     "nix.clean.14d" = "sudo nix-collect-garbage --delete-older-than 14d";
     "nix.clean.30d" = "sudo nix-collect-garbage --delete-older-than 30d";
     "nix.clean.all" = "sudo nix-collect-garbage -d";
-    "nix.config" = "sudo nvim /etc/nixos/configuration.nix";
-    "flake.config" = "sudo nvim /etc/nixos/flake.nix";
+    "nix.config" = "nvim /etc/nixos/configuration.nix";
+    "flake.config" = "nvim /etc/nixos/flake.nix";
     };
 
   # nvidia settings
