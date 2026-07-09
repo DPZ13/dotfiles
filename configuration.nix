@@ -5,7 +5,7 @@
 {
   imports =
     [
-      ./hardware-configuration.nix
+      ./hosts/lenovo/hardware-configuration.nix
       ./modules/programs.nix
       ./modules/services.nix
       ./modules/boot.nix
