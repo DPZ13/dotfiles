@@ -1,5 +1,6 @@
 { config, lib, pkgs, inputs, ... }:
 
+
 {
   imports =
     [
@@ -11,12 +12,6 @@
   
   # experimental
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  # host
-  networking.hostName = "nixos";
-
-  # network-manager
-  networking.networkmanager.enable = true;
 
   # timezone
   time.timeZone = "Europe/Saratov";
