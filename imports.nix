@@ -9,5 +9,6 @@
       ./modules/boot.nix
       ./modules/hardware.nix
       ./modules/aliases.nix
+      ./modules/network/network.nix
     ];
 }
