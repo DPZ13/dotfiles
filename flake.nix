@@ -9,7 +9,7 @@
 				specialArgs = { inherit inputs; };
 				modules = [ 
 					./configuration.nix
-					./hosts/lenovo/hardware-configuration.nix
+					./hosts/LOQ_15ARP9/hardware-configuration.nix
 				];
 			};
 		};
