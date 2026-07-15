@@ -2,8 +2,8 @@
 
 {
 	users = {
+		defaultUserShell = pkgs.fish;
 		users = {
-			defaultUserShell = pkgs.fish;
 			dpz = {
 				isNormalUser = true;
 				extraGroups = [ "wheel" "adbusers" ];
