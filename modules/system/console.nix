@@ -5,7 +5,7 @@
 		enable = true;
 		font = "ter-c32b";
 		packages = with pkgs; [ terminus_font ];
-		useXkbconfig = true;
+		useXkbConfig = true;
 		earlySetup = true;
 		colors = [
 			"000000" # black
