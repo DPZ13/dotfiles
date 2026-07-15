@@ -5,4 +5,5 @@
 	time.timeZone = "Europe/Saratov";
 	i18n.defaultLocale = "ru_RU.UTF-8";
 	system.stateVersion = "26.05"; # DO NOT TOUCH ! ! !
+	nixpkgs.config.allowUnfree = true;
 }
