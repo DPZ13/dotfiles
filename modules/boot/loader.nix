@@ -11,7 +11,5 @@
 				useOSProber = true;
 			};
 		};
-		kernelPackages = pkgs.linuxPackages_latest;
-		kernelParams = [ "pcie.aspm=off" ];
 	};
 }

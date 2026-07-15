@@ -4,34 +4,26 @@
 {
   imports =
     [
-    	./imports.nix
+      ./hosts/LOQ_15ARP9/hardware-configuration.nix
+
+      ./modules/aliases/clean.nix
+      ./modules/aliases/config.nix
+      ./modules/aliases/update.nix
+
+      ./modules/boot/kernel.nix
+      ./modules/boot/loader.nix
+
+      ./modules/hardware/nvidia.nix
+
+      ./modules/network/default.nix
+      ./modules/network/networkmanager.nix
+
+      ./modules/packages/packages.nix
+      ./modules/packages/programs.nix
+      ./modules/packages/services.nix
+
+      ./modules/system/console.nix
+      ./modules/system/system.nix
+      ./modules/system/users.nix
     ];
-
-  # allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-  
-  # experimental
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  # timezone
-  time.timeZone = "Europe/Saratov";
-
-  # locales and keymaps in TTY
-   i18n.defaultLocale = "ru_RU.UTF-8";
-  console = {
-    font = "ter-u32b";
-    packages = with pkgs; [ terminus_font ];
-    earlySetup = true;
-    useXkbConfig = true;
-  };  
-
-  # user (dpz)
-  users.users.dpz = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" ];
-  };
-
-  # DO NOT TOUCH STUPID!!!!!!!
-  system.stateVersion = "26.05";
-
 }
